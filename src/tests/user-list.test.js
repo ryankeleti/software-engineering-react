@@ -1,4 +1,4 @@
-import {UserList} from "../components/profile/userList";
+import {UserList} from "../components/profile/user-list";
 import {screen, render} from "@testing-library/react";
 import {HashRouter} from "react-router-dom";
 import {findAllUsers} from "../services/users-service";
