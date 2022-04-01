@@ -28,6 +28,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
               {
                 <i className="fas fa-thumbs-down me-1" style={{color: 'red'}}></i>
               }
+            <span>{tuit.stats && tuit.stats.dislikes}</span>
           </span>
         </div>
         <div className="col">
