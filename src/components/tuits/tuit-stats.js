@@ -19,6 +19,16 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
       dislikedTuit().then((v) => setDisliked(v));
     }, [tuit, likeTuit, dislikeTuit]);
 
+    const toggleLike = () => {
+      likeTuit(tuit);
+      setLiked(v => !v);
+    };
+
+    const toggleDislike = () => {
+      dislikeTuit(tuit);
+      setDisliked(v => !v);
+    };
+
     return (
       <div className="row mt-2">
         <div className="col">
@@ -34,7 +44,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
           }
         </div>
         <div className="col">
-          <span className="ttr-like-tuit-click" onClick={() => likeTuit(tuit)}>
+          <span className="ttr-like-tuit-click" onClick={toggleLike}>
              { liked ?
                   <i className="fas fa-thumbs-up me-1"></i>
                 : <i className="far fa-thumbs-up me-1"></i> }
@@ -42,7 +52,7 @@ const TuitStats = ({tuit, likeTuit, dislikeTuit}) => {
           </span>
         </div>
         <div className="col">
-          <span onClick={() => dislikeTuit(tuit)}>
+          <span onClick={toggleDislike}>
              { disliked ?
                   <i className="fas fa-thumbs-down me-1"></i>
                 : <i className="far fa-thumbs-down me-1"></i> }
