@@ -1,7 +1,13 @@
+/**
+ * @file My Dislikes profile component
+ */
 import Tuits from "../tuits";
 import * as service from "../../services/likes-service";
 import {useEffect, useState} from "react";
 
+/**
+ * Displays a user's disliked tuits under their profile
+ */
 const MyDislikes = () => {
     const [dislikedTuits, setDislikedTuits] = useState([]);
     const findTuitsIDislike = () =>
