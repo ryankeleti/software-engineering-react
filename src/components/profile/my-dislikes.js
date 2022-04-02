@@ -11,7 +11,6 @@ const MyDislikes = () => {
 
     return(
         <div>
-            <h2>My Dislikes</h2>
             <Tuits tuits={dislikedTuits} refreshTuits={findTuitsIDislike}/>
         </div>
     );
