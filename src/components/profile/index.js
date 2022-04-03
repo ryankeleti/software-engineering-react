@@ -6,6 +6,11 @@ import TuitsAndReplies from "./tuits-and-replies";
 import Media from "./media";
 import MyLikes from "./my-likes";
 import MyDislikes from "./my-dislikes";
+
+/**
+ * Displays a user's profile information, along with tabs for user's tuits,
+ * liked tuits, and disliked tuits.
+ */
 const Profile = () => {
   const navigate = useNavigate();
   const location = useLocation();
